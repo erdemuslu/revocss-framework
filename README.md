@@ -1,5 +1,5 @@
-# Frontend Boilerplate
-a usefull boilerplate for your projects
+# Revo Css Framework
+minimalist & lightweight css framework
 
 ## Contains
 * sass
@@ -12,7 +12,6 @@ a usefull boilerplate for your projects
 
 ```
 $ npm install
-$ bower install
 $ gulp setup
 ```
 
