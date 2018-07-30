@@ -1,0 +1,20 @@
+extends layouts/default
+
+block classBlock
+    - bodyClasses.push('home')
+    - breadcrumb = 'Home'
+    - pageId = 'home'
+
+block content
+    .r-row
+        .r-wrap
+            .r-col.r-col--half
+                .inner Col
+            .r-col.r-col--half
+                .inner Col
+            .r-col.r-col--quarter
+                .inner Col
+            .r-col.r-col--half--xs
+                .inner Col
+            .r-col.r-col--full
+                .inner Col
