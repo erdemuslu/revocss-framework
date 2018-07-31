@@ -1,8 +1,11 @@
-.r-col {
-    padding: 16px;
-    margin-top: 16px;
-    .inner {
-        background-color: #fff;
+.grid {
+    .r-col {
         padding: 16px;
+        margin-top: 16px;
+        background-color: bisque;
+        .inner {
+            background-color: #fff;
+            padding: 16px;
+        }
     }
 }

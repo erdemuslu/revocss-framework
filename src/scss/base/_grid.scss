@@ -1,8 +1,8 @@
 .r-row {
-    max-width: 1200px;
+    max-width: $container-max-width;
     margin-left: auto;
     margin-right: auto;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: $container-max-width) {
         width: calc(100% - 128px);
     }
     @media screen and (max-width: 768px) {
@@ -19,7 +19,6 @@
 .r-col {
     flex-grow: 1;
     margin-right: $column-gap;
-    background-color: bisque;
     &--quarter {
         flex-basis: calc(25% - 16px);
         flex-grow: unset;
