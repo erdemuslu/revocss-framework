@@ -3,9 +3,6 @@
     margin-left: auto;
     margin-right: auto;
     @media screen and (max-width: $container-max-width) {
-        width: calc(100% - 128px);
-    }
-    @media screen and (max-width: 768px) {
         width: calc(100% - 32px);
     }
 }
@@ -16,31 +13,16 @@
     margin-right: -($column-gap);
 }
 
-$columns: (
-    quarter: 3,
-    half: 6,
-    full: 12,
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-    10: 10,
-    11: 11,
-    12: 12
-);
-
 .r-col {
     flex-grow: 1;
     margin-right: $column-gap;
 }
 
-@each $column-name, $column-size in $columns {
-    .r-col--#{$column-name} {
+// render columns
+$columns: 12;
+
+@for $column-size from 1 through $columns {
+    .r-col--#{$column-size} {
         flex-grow: unset;
         flex-basis: calc(((100% / 12) * #{$column-size}) - 16px);
         &--tablet {
