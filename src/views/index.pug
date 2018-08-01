@@ -16,3 +16,9 @@ block content
             .r-col
                 .title
                     p Lightweight css framework
+            .r-col.r-col--full
+                ul.nav
+                    each item in [{"name": "Grid", "link": "grid"}]
+                        li
+                            a(href="/" + item.link + ".html")= item.name
+

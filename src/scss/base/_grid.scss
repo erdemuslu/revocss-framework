@@ -16,25 +16,44 @@
     margin-right: -($column-gap);
 }
 
+$columns: (
+    quarter: 3,
+    half: 6,
+    full: 12,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+    11: 11,
+    12: 12
+);
+
 .r-col {
     flex-grow: 1;
     margin-right: $column-gap;
-    &--quarter {
-        flex-basis: calc(25% - 16px);
+}
+
+@each $column-name, $column-size in $columns {
+    .r-col--#{$column-name} {
         flex-grow: unset;
-    }
-    &--half {
-        flex-grow: unset;
-        flex-basis: calc(50% - 16px);
-        &--xs {
-            @media screen and (max-width: 768px) {
-                flex-basis: calc(50% - 16px);
+        flex-basis: calc(((100% / 12) * #{$column-size}) - 16px);
+        &--tablet {
+            @media screen and (max-width: 1000px) {
+                flex-basis: calc(((100% / 12) * #{$column-size}) - 16px);
                 flex-grow: unset;
             }
         }
-    }
-    &--full {
-        flex-grow: unset;
-        flex-basis: calc(100% - 16px);
+        &--mobile {
+            @media screen and (max-width: 768px) {
+                flex-basis: calc(((100% / 12) * #{$column-size}) - 16px);
+                flex-grow: unset;
+            }
+        }
     }
 }
