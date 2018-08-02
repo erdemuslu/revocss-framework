@@ -35,5 +35,11 @@
     .nav {
         margin-top: 2em;
         text-align: center;
+        li {
+            display: inline-block;
+            &:not(:first-child) {
+                margin-left: .75em;
+            }
+        }
     }
 }

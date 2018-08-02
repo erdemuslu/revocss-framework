@@ -8,3 +8,17 @@ html, body {
     font-family: sans-serif;
     height: 100%;
 }
+
+h1, h2, h3, h4, h5 {
+    font-family: $heading-font;
+}
+
+h1, h2, h3, p, span, div {
+    color: $black;
+}
+
+h4, h5, h6 {
+    color: $black--lighter;
+    font-size: 1em;
+    font-weight: 400;
+}

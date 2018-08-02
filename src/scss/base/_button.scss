@@ -1,0 +1,39 @@
+.button {
+    display: inline-flex;
+    font-size: 1em;
+    border-radius: 2px;
+    padding: .875em 5em;
+    line-height: normal;
+    outline: unset;
+    box-shadow: unset;
+    border: unset;
+    white-space: nowrap;
+    color: #fff;
+    background-color: $black;
+    font-family: $main-font;
+    cursor: pointer;
+    transition: background-color ease .16s;
+    &:hover {
+        background-color: lighten($black, 10);
+    }
+    &--primary {
+        background-color: $main-color;
+        &:hover {
+            background-color: lighten($main-color, 10);
+        }
+    }
+    &--success {
+        background-color: $success-color;
+        &:hover {
+            background-color: lighten($success-color, 5);
+        }
+    }
+    &--danger {
+        background-color: $danger-color;
+        &:hover {
+            background-color: lighten($danger-color, 10);
+        }
+    }
+    &--loading {
+    }
+}
