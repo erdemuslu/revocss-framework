@@ -27,7 +27,7 @@ $buttons: (
     background-color: $black;
     font-family: $main-font;
     cursor: pointer;
-    transition: background-color ease .16s;
+    transition: background-color ease .16s, padding ease .16s;
     &:hover {
         background-color: lighten($black, 10);
     }
@@ -55,17 +55,22 @@ $buttons: (
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-        &--light {
-            border-color: #fff;
-        }
     }
 }
 
 @each $button-name, $button-color in $buttons {
     .button--#{$button-name} {
         background-color: $button-color;
+        border-color: $button-color;
         &:hover {
             background-color: lighten($button-color, 10);
         }
     }
+}
+
+.button--loading--light {
+    border-color: #fff;
+}
+.button--loading--dark {
+    border-color: $black;
 }
