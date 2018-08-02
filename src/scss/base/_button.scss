@@ -1,3 +1,18 @@
+$buttons: (
+    primary: $main-color,
+    success: $success-color,
+    danger: $danger-color
+);
+
+@keyframes spinLoading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .button {
     display: inline-flex;
     font-size: 1em;
@@ -16,24 +31,41 @@
     &:hover {
         background-color: lighten($black, 10);
     }
-    &--primary {
-        background-color: $main-color;
-        &:hover {
-            background-color: lighten($main-color, 10);
-        }
-    }
-    &--success {
-        background-color: $success-color;
-        &:hover {
-            background-color: lighten($success-color, 5);
-        }
-    }
-    &--danger {
-        background-color: $danger-color;
-        &:hover {
-            background-color: lighten($danger-color, 10);
-        }
-    }
     &--loading {
+        position: relative;
+        padding-left: 3em;
+        padding-right: 3em;
+        pointer-events: none;
+        border-color: $black;
+        &:after {
+            content: "";
+            position: absolute;
+            width: calc(1.25em - 2px);
+            height: calc(1.25em - 2px);
+            left: calc(100% + 2em);
+            top: .875em;
+            border-radius: 50%;
+            border-width: 2px;
+            border-style: solid;
+            border-color: inherit;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            animation-name: spinLoading;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        &--light {
+            border-color: #fff;
+        }
+    }
+}
+
+@each $button-name, $button-color in $buttons {
+    .button--#{$button-name} {
+        background-color: $button-color;
+        &:hover {
+            background-color: lighten($button-color, 10);
+        }
     }
 }
