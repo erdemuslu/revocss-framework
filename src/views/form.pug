@@ -21,4 +21,30 @@ block content
                         label Email
                         input(type="email", class="form__input", placeholder="test@test.com")
                         .form__help This email is incorrect.
-                    
+                    .form-row.form-row--checkbox
+                        label
+                            input(type="checkbox", class="form__input")
+                            span.checkbox-visualize
+                            | I agree to the
+                            a(href="#") terms and condition
+            .r-col.r-col--2
+            .r-col.r-col--4
+                .example-form
+                    h1 Example Form
+                    .form
+                        .form-row
+                            label Email
+                            input(type="email", class="form__input", placeholder="test@test.com")
+                        .form-row
+                            label Password
+                            input(type="password", class="form__input", placeholder="Your password")
+                        .form-row.form-row--checkbox
+                            label
+                                input(type="checkbox", class="form__input")
+                                span.checkbox-visualize
+                                | I agree to the
+                                a(href="#") terms and condition                            
+                        .form-row.form-row--footer
+                            button.button Submit
+                            div
+                                a(href="#") Forgot your password?
