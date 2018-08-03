@@ -1,0 +1,24 @@
+extends layouts/default
+
+block classBlock
+    - bodyClasses.push('form-page')
+    - breadcrumb = 'Form Page'
+    - pageId = 'form-page'
+
+block content
+    .r-row
+        .r-wrap
+            .r-col.r-col--4
+                .form
+                    .form-row
+                        label Email
+                        input(type="email", class="form__input", placeholder="test@test.com")
+                    .form-row.form-row--success
+                        label Email
+                        input(type="email", class="form__input", placeholder="test@test.com")
+                        .form__help This email is correct.
+                    .form-row.form-row--error
+                        label Email
+                        input(type="email", class="form__input", placeholder="test@test.com")
+                        .form__help This email is incorrect.
+                    

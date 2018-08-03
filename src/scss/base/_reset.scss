@@ -13,3 +13,24 @@ a {
     text-decoration: none;
     color: $link-color;
 }
+
+// form elements
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+    outline: unset;
+    border: 1px solid $border-color;
+    font-size: .875em;
+    color: $input-text-color;
+}

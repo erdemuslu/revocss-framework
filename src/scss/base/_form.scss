@@ -1,0 +1,48 @@
+.form {
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        &:not(:last-child) {
+            margin-bottom: 1.25em;
+        }
+        label, input, .form__help {
+            display: inline-flex;
+            flex-basis: 100%;
+            font-size: .875em;
+        }
+        label, input {
+            margin-bottom: .5em;
+        }
+        label {
+            font-weight: 300;
+            color: $label-color;
+        }
+        input {
+            height: 50px;
+            padding-left: .875em;
+            font-weight: 300;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,.04);
+            border-radius: 2px;
+        }
+        .form__help {
+            color: $black--lighter;
+            font-size: .75em;
+        }
+        &--success {
+            input {
+                border-color: $success-color;
+            }
+            .form__help {
+                color: $success-color;
+            }   
+        }
+        &--error {
+            input {
+                border-color: $danger-color;
+            }
+            .form__help {
+                color: $danger-color;
+            }   
+        }
+    }
+}
