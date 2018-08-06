@@ -24,9 +24,19 @@ block content
                     .form-row.form-row--checkbox
                         label
                             input(type="checkbox", class="form__input")
-                            span.checkbox-visualize
+                            span
                             | I agree to the &nbsp;
                             a(href="#") terms and condition
+                    .form-row.form-row--radio
+                        h4 Question
+                        label
+                            input(type="radio", name="x")
+                            span
+                            | Yes
+                        label
+                            input(type="radio", name="x")
+                            span
+                            | No
                     .form-row
                         label Select
                         .select
