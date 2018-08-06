@@ -27,6 +27,13 @@ block content
                             span.checkbox-visualize
                             | I agree to the
                             a(href="#") terms and condition
+                    .form-row
+                        label Select
+                        .select
+                            select
+                                option(value="default") Default Value
+                                option(value="valueI") Value I
+                                option(value="valueII") Value II
             .r-col.r-col--2
             .r-col.r-col--4
                 .example-form
@@ -38,6 +45,13 @@ block content
                         .form-row
                             label Password
                             input(type="password", class="form__input", placeholder="Your password")
+                        .form-row
+                            label Choose Topic
+                            .select
+                                select
+                                    option(value="default") Default Value
+                                    option(value="valueI") Value I
+                                    option(value="valueII") Value II
                         .form-row.form-row--checkbox
                             label
                                 input(type="checkbox", class="form__input")
