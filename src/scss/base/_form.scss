@@ -37,6 +37,7 @@
             border-radius: unset;
             margin-bottom: 0;
             flex-basis: unset;
+            height: unset;
         }
         .form__help {
             color: $black--lighter;
@@ -149,6 +150,54 @@
                     height: 12px;
                     bottom: 2px;
                     margin-right: .8em;
+                    &:checked + span {
+                        &:before {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+        //  @TODO: &--checked  - &--radio have same method
+        &--radio {
+            h1, h2, h3, h4, h5 {
+                flex-basis: 100%;
+                margin-bottom: 1em;
+                font-family: sans-serif;
+                font-weight: 300;
+            }
+            label {
+                cursor: pointer;
+                position: relative;
+                flex-basis: unset;
+                &:not(:last-child) {
+                    margin-right: 1em;
+                }
+                span {
+                    position: absolute;
+                    z-index: 2;
+                    left: 0;
+                    bottom: 1px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                    background-color: transparent;
+                    border: 1px solid $border-color;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 2px;
+                        bottom: 2px;
+                        width: calc(100% - 4px);
+                        height: calc(100% - 4px);
+                        transition: transform ease .16s;
+                        transform: scale(0);
+                        background-color: $success-color;
+                    }
+                }                
+                input {
+                    opacity: 0;
+                    margin-right: .5em;
                     &:checked + span {
                         &:before {
                             transform: scale(1);
