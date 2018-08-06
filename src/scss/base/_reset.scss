@@ -29,7 +29,8 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week],
-select {
+select,
+textarea {
     outline: unset;
     border: 1px solid $border-color;
     font-size: .875em;
