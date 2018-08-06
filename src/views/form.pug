@@ -47,6 +47,17 @@ block content
                     .form-row
                         label Textarea
                         textarea(placeholder="Your message")
+                    .form-row.form-row--file
+                        h4 File Upload
+                        label
+                            input(type="file")
+                            span Choose a file
+                    .form-row.form-row--file.form-row--file--name
+                        h4 File Upload With File Name
+                        label
+                            input(type="file")
+                            span Choose a file
+                            .file-name file_name.png
             .r-col.r-col--2
             .r-col.r-col--4
                 .example-form
