@@ -20,12 +20,18 @@
         input {
             height: 50px;
             padding-left: .875em;
+            padding-right: .875em;
             font-weight: 300;
             box-shadow: inset 0 1px 3px rgba(0,0,0,.04);
-            border-radius: 2px;
+            border-radius: $form-elements-border-radius;
+            transition: border ease .16s;
+            &:focus {
+                border-color: $black--lighter;
+            }
         }
         input[type="checkbox"], input[type="radio"] {
             padding-left: unset;
+            padding-right: unset;
             font-weight: unset;
             box-shadow: unset;
             border-radius: unset;
@@ -36,8 +42,51 @@
             color: $black--lighter;
             font-size: .75em;
         }
+        .select {
+            position: relative;
+            width: 100%;
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 8px;
+                height: 1px;
+                background-color: $black--lighter;
+            }
+            &:before {
+                right: 27px;
+                transform: rotate(45deg);
+            }
+            &:after {
+                right: 22px;
+                transform: rotate(-45deg);
+            }
+            select {
+                display: inline-flex;
+                width: 100%;
+                height: 50px;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding-left: .875em;
+                padding-right: 54px;
+                transition: border ease .16s;
+                border-radius: $form-elements-border-radius;
+                &:focus {
+                    border-color: $black--lighter;
+                }
+                option {
+                    font-weight: normal;
+                    display: block;
+                    white-space: pre;
+                    min-height: 1.2em;
+                    padding: 0px 2px 1px;
+                }
+            }
+        }
         &--success {
-            input {
+            input, select, textarea {
                 border-color: $success-color;
             }
             .form__help {
@@ -45,7 +94,7 @@
             }   
         }
         &--error {
-            input {
+            input, select, textarea {
                 border-color: $danger-color;
             }
             .form__help {
@@ -103,6 +152,7 @@
         &--footer {
             button {
                 margin-right: 1em;
+                margin-bottom: 1em;
             }
             & > div {
                 display: inline-flex;
