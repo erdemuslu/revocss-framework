@@ -42,6 +42,17 @@
             color: $black--lighter;
             font-size: .75em;
         }
+        textarea {
+            width: 100%;
+            min-height: 10em;
+            border-radius: $form-elements-border-radius;
+            padding: .875em;
+            transition: border ease .16s;
+            resize: vertical;
+            &:focus {
+                border-color: $black--lighter;
+            }            
+        }
         .select {
             position: relative;
             width: 100%;
@@ -159,6 +170,7 @@
                 flex-direction: column;
                 justify-content: center;
                 a {
+                    padding-bottom: 1em;
                     font-size: .75em;
                     color: $input-placeholder-color;
                     transition: color ease .32s;
