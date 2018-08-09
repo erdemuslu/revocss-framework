@@ -1,0 +1,24 @@
+extends layouts/default
+
+block classBlock
+    - bodyClasses.push('card-page')
+    - breadcrumb = 'Card Page'
+    - pageId = 'card-page'
+
+block content
+    .r-row
+        .r-wrap
+            .r-col--4
+                .card
+                    .card-photo
+                        img(src="images/product-example-1.png")
+                    .card-title
+                        h2 Example Title
+                        h3 Example Subtitle
+                    .card-footer
+                        a(href="#").button.button--small Buy
+                        .price
+                            span.price-amount 20
+                            span.price-type $
+                        .like
+                            a.button.button--danger.button--small Like
