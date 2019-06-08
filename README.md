@@ -1,22 +1,5 @@
 # Revo Css Framework
-minimalist & lightweight css framework
+minimalist css framework
 
-## Contains
-* sass
-* pug
-* browserify
-* es6
-* axios
-
-## Setup
-
-```
-$ npm install
-$ gulp setup
-```
-
-## Launch
-
-```
-$ gulp
-```
+## Buttons
+Example: https://codepen.io/erdemuslu/pen/dExjGO

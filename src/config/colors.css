@@ -1,0 +1,10 @@
+:root {
+  --r-black-color: #000f08;
+  --r-black-hover-color: #17241e;
+  --r-info-color: #006bdc;
+  --r-info-hover-color: #1781f3;
+  --r-danger-color: #ff3366;
+  --r-danger-hover-color: #ff5881;
+  --r-warning-color: #f3a738;
+  --r-warning-hover-color: #f5b75c;
+}

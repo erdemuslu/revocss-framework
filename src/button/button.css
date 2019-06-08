@@ -1,0 +1,122 @@
+/* keyframes for loading */
+@keyframes r-spin-animaton {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.r-btn {
+  /* layout is flex based */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* spacing */
+  padding: .8em 2em;
+  border-radius: .24em;
+  /* colors */
+  background-color: var(--r-black-color);
+  color: #fff;
+  /* transition */
+  transition: background-color .24s linear 0s;
+}
+
+.r-btn:hover {
+  background-color: var(--r-black-hover-color);
+}
+
+.r-btn.is-info {
+  background-color: var(--r-info-color);
+}
+
+.r-btn.is-info:hover {
+  background-color: var(--r-info-hover-color);
+}
+
+.r-btn.is-danger {
+  background-color: var(--r-danger-color);
+}
+
+.r-btn.is-danger:hover {
+  background-color: var(--r-danger-hover-color);
+}
+
+.r-btn.is-warning {
+  background-color: var(--r-warning-color);
+}
+
+.r-btn.is-warning:hover {
+  background-color: var(--r-warning-hover-color);
+}
+
+.r-btn.is-loading {
+  position: relative;
+  overflow: hidden;
+  border-color: #fff;
+  pointer-events: none;
+}
+
+.r-btn.is-loading * {
+  pointer-events: none;
+}
+
+.r-btn.is-loading:before, .r-btn.is-loading:after {
+  content: "";
+  position: absolute;
+}
+
+.r-btn.is-loading:before {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+}
+
+.r-btn.is-loading:after {
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  left: 50%;
+  top: 50%;
+  margin-left: -.5em;
+  margin-top: -.5em;
+  border-radius: 50%;
+  border-width: .12em;
+  border-style: solid;
+  border-color: inherit;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  animation-name: r-spin-animaton;
+  animation-duration: .48s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.r-btn.is-small {
+  font-size: .875em;
+  padding: .4em 1em;
+}
+
+.r-btn.is-small:after {
+  width: .64em;
+  height: .64em;
+  margin-left: -.32em;
+  margin-top: -.32em;
+}
+
+.r-btn.is-large {
+  font-size: 1.24em;
+  padding: 1em 2.4em;
+}
+
+.r-btn.is-large:after {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: -.6em;
+  margin-top: -.6em;
+}

@@ -1,0 +1,25 @@
+/* reset */
+.r-btn {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none; /* for firefox */
+  white-space: nowrap;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* for iOS and safari */
+.r-btn,
+.r-btn[type="button"],
+.r-btn[type="reset"],
+.r-btn[type="submit"] {
+  -webkit-appearance: button;
+}

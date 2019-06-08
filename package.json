@@ -1,55 +1,20 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "revocss-framework",
   "version": "1.0.0",
-  "description": "Frontend Boilerplate with sass, pug, browserify and more",
+  "description": "minimalist css framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erdemuslu/frontend-boilerplate.git"
+    "url": "git+https://github.com/erdemuslu/revocss-framework.git"
   },
-  "keywords": [
-    "sass",
-    "npm",
-    "git",
-    "gulp"
-  ],
-  "author": "Erdem Uslu",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/erdemuslu/frontend-boilerplate/issues"
+    "url": "https://github.com/erdemuslu/revocss-framework/issues"
   },
-  "homepage": "https://github.com/erdemuslu/frontend-boilerplate#readme",
-  "devDependencies": {
-    "axios": "^0.18.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-syntax-async-functions": "^6.13.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.26.0",
-    "browserify": "^16.1.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.6.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-newer": "^1.4.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "hoek": "^5.0.3",
-    "lodash": "^4.17.5",
-    "merge-stream": "^1.0.1",
-    "node-mime": "^1.0.0",
-    "popper.js": "^1.14.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "dependencies": {
-    "uglify-js": "^3.3.16"
-  }
+  "homepage": "https://github.com/erdemuslu/revocss-framework#readme"
 }
