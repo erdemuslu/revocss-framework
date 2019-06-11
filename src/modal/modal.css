@@ -1,7 +1,13 @@
-.r-modal {
+.r-modal-inner {
+  max-height: 64vh;
+  overflow-y: scroll;
   background-color: var(--r-modal-dark-bg);
   color: var(--r-modal-dark-text);
   border-radius: .25em;
+}
+
+.r-modal-bg {
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .r-modal-header, .r-modal-main, .r-modal-footer {
@@ -36,7 +42,11 @@
 }
 
 /* light theme */
-.r-modal.is-light {
+.r-modal.is-light .r-modal-bg {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.r-modal.is-light .r-modal-inner {
   background-color: #fff;
   color: var(--r-modal-dark-bg);
   border: 1px solid var(--r-modal-dark-text);
@@ -47,7 +57,7 @@
 }
 
 /* shadow */
-.r-modal.has-shadow {
+.r-modal.has-shadow .r-modal-inner {
   border: 0;
   box-shadow: 0 .375em .75em 0 rgba(0, 0, 0, .08);
 }
@@ -55,11 +65,20 @@
 /* fixed modal */
 .r-modal.is-fixed {
   position: fixed;
+  z-index: 64;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 64;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .32s linear 0s;
+}
+
+.r-modal.is-fixed, .r-modal.is-fixed * {
+  pointer-events: none;
 }
 
 .r-modal.is-fixed *[data-r-modal-type="close"] {
@@ -73,4 +92,19 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.r-modal.is-fixed .r-modal-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  width: 40em;
+}
+
+.r-modal.is-opened {
+  opacity: 1;
+}
+
+.r-modal.is-opened, .r-modal.is-opened * {
+  pointer-events: auto;
 }

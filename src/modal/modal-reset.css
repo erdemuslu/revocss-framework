@@ -1,11 +1,11 @@
 /* reset */
-.r-modal {
+.r-modal, .r-modal .r-modal__title, .r-modal .r-modal__text  {
+  margin: 0;
+  padding: 0;
+}
+
+.r-modal-inner {
   padding: 2em;
   margin: 0;
   box-sizing: border-box;
-}
-
-.r-modal .r-modal__title, .r-modal .r-modal__text {
-  margin: 0;
-  padding: 0;
 }
