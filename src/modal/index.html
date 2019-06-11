@@ -58,8 +58,6 @@
         <!-- background to close the r-modal -->
         <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
-          <!-- icon drawed with css -->
-          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -80,8 +78,6 @@
         <!-- background to close the r-modal -->
         <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
-          <!-- icon drawed with css -->
-          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -102,8 +98,6 @@
         <!-- background to close the r-modal -->
         <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
-          <!-- icon drawed with css -->
-          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -124,8 +118,6 @@
         <!-- background to close the r-modal -->
         <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
-          <!-- icon drawed with css -->
-          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Fixed modal example</h1>
@@ -165,10 +157,17 @@
   <!-- demo javascript to test fixed modal -->
   <script>
     const btn = document.querySelector('.r-btn[data-modal-type="open"]');
+    const closeBtns = document.querySelectorAll('*[data-modal-type="close"]')
     const modal = document.querySelector('.r-modal.is-fixed');
 
     btn.onclick = function () {
       modal.classList.add('is-opened');
+    }
+
+    for (var i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].onclick = function() {
+        modal.classList.remove('is-opened');
+      }
     }
   </script>
 </body>
