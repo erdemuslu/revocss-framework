@@ -1,0 +1,76 @@
+.r-modal {
+  background-color: var(--r-modal-dark-bg);
+  color: var(--r-modal-dark-text);
+  border-radius: .25em;
+}
+
+.r-modal-header, .r-modal-main, .r-modal-footer {
+  width: 100%;
+}
+
+.r-modal-header, .r-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.r-modal-main {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* title of modal */
+.r-modal__title {
+  font-size: 1.16em;
+  font-weight: 400;
+  color: var(--r-modal-dark-title);
+}
+
+/* text of modal */
+.r-modal__text {
+  font-size: .875em;
+  font-weight: 300;
+  line-height: 1.64;
+  text-align: center;
+}
+
+/* light theme */
+.r-modal.is-light {
+  background-color: #fff;
+  color: var(--r-modal-dark-bg);
+  border: 1px solid var(--r-modal-dark-text);
+}
+
+.r-modal.is-light .r-modal__title {
+  color: inherit;
+}
+
+/* shadow */
+.r-modal.has-shadow {
+  border: 0;
+  box-shadow: 0 .375em .75em 0 rgba(0, 0, 0, .08);
+}
+
+/* fixed modal */
+.r-modal.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 64;
+}
+
+.r-modal.is-fixed *[data-r-modal-type="close"] {
+  cursor: pointer;
+}
+
+.r-modal.is-fixed .r-modal-bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

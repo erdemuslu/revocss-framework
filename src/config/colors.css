@@ -1,10 +1,16 @@
 :root {
-  --r-black-color: #000f08;
-  --r-black-hover-color: #17241e;
+  /* base colors */
+  --r-black-color: #12161a;
+  --r-black-hover-color: #171d23;
   --r-info-color: #006bdc;
   --r-info-hover-color: #1781f3;
   --r-danger-color: #ff3366;
   --r-danger-hover-color: #ff5881;
   --r-warning-color: #f3a738;
   --r-warning-hover-color: #f5b75c;
+
+  /* modal colors */
+  --r-modal-dark-bg: #12161a;
+  --r-modal-dark-title: #d3dde7;
+  --r-modal-dark-text: #a0b3c6;
 }
