@@ -15,11 +15,3 @@
   user-select: none;
   cursor: pointer;
 }
-
-/* for iOS and safari */
-.r-btn,
-.r-btn[type="button"],
-.r-btn[type="reset"],
-.r-btn[type="submit"] {
-  -webkit-appearance: button;
-}

@@ -34,10 +34,10 @@
     <div class="box">
       <div class="r-modal">
         <!-- background to close the r-modal -->
-        <div class="r-modal-bg" data-r-modal-type="close"></div>
+        <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
           <!-- icon drawed with css -->
-          <div class="r-modal__close" data-r-modal-type="close"></div>
+          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -56,10 +56,10 @@
     <div class="box">
       <div class="r-modal is-light">
         <!-- background to close the r-modal -->
-        <div class="r-modal-bg" data-r-modal-type="close"></div>
+        <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
           <!-- icon drawed with css -->
-          <div class="r-modal__close" data-r-modal-type="close"></div>
+          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -78,10 +78,10 @@
     <div class="box">
       <div class="r-modal has-shadow">
         <!-- background to close the r-modal -->
-        <div class="r-modal-bg" data-r-modal-type="close"></div>
+        <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
           <!-- icon drawed with css -->
-          <div class="r-modal__close" data-r-modal-type="close"></div>
+          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -100,10 +100,10 @@
     <div class="box">
       <div class="r-modal is-light has-shadow">
         <!-- background to close the r-modal -->
-        <div class="r-modal-bg" data-r-modal-type="close"></div>
+        <div class="r-modal-bg" data-modal-type="close"></div>
         <div class="r-modal-inner">
           <!-- icon drawed with css -->
-          <div class="r-modal__close" data-r-modal-type="close"></div>
+          <div class="r-modal__close" data-modal-type="close"></div>
           <!-- header -->
           <div class="r-modal-header">
             <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -119,12 +119,34 @@
         </div>
       </div>
     </div>
-    <div class="r-modal is-fixed has-shadow">
+    <div class="box">
+      <div class="r-modal is-light has-shadow">
+        <!-- background to close the r-modal -->
+        <div class="r-modal-bg" data-modal-type="close"></div>
+        <div class="r-modal-inner">
+          <!-- icon drawed with css -->
+          <div class="r-modal__close" data-modal-type="close"></div>
+          <!-- header -->
+          <div class="r-modal-header">
+            <h1 class="r-modal__title">Fixed modal example</h1>
+          </div>
+          <!-- content -->
+          <div class="r-modal-main">
+            <p class="r-modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, deleniti? Libero quo, magnam. Quia, asperiores repellat delectus nulla reiciendis!</p>
+          </div>
+          <!-- footer | call to action -->
+          <div class="r-modal-footer">
+            <a href="#" class="r-btn is-info" data-modal-type="open">Open fixed modal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="r-modal is-light is-fixed has-shadow">
       <!-- background to close the r-modal -->
-      <div class="r-modal-bg" data-r-modal-type="close"></div>
+      <div class="r-modal-bg" data-modal-type="close"></div>
       <div class="r-modal-inner">
         <!-- icon drawed with css -->
-        <div class="r-modal__close" data-r-modal-type="close"></div>
+        <div class="r-modal__close" data-modal-type="close"></div>
         <!-- header -->
         <div class="r-modal-header">
           <h1 class="r-modal__title">Upgrade to premium</h1>
@@ -140,5 +162,14 @@
       </div>
     </div>
   </div>
+  <!-- demo javascript to test fixed modal -->
+  <script>
+    const btn = document.querySelector('.r-btn[data-modal-type="open"]');
+    const modal = document.querySelector('.r-modal.is-fixed');
+
+    btn.onclick = function () {
+      modal.classList.add('is-opened');
+    }
+  </script>
 </body>
 </html>

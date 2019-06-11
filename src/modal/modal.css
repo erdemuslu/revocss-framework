@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity .32s linear 0s;
+  transition: opacity .24s linear 0s;
 }
 
 .r-modal.is-fixed, .r-modal.is-fixed * {
